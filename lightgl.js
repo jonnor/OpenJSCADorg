@@ -2254,3 +2254,8 @@ var GL = (function() {
 
 	return GL;
 })();
+
+if (typeof exports !== 'undefined') {
+    // Running as common.js module
+    module.exports = GL
+}

@@ -5,6 +5,13 @@
 // 2013/03/12: reenable webgui parameters to fit in current design
 // 2013/03/11: few changes to fit design of http://openjscad.org
 
+if (typeof require !== 'undefined') {
+    // Running inside common.js environment
+    GL = require("lightgl");
+    CAG = require("csg").CAG;
+    CSG = require("csg").CSG;
+}
+
 OpenJsCad = function() { };
 
 OpenJsCad.log = function(txt) {
@@ -1614,4 +1621,8 @@ OpenJsCad.Processor.prototype = {
   },
 };
 
+
+if (typeof exports !== 'undefined') {
+    exports = OpenJsCad
+}
 

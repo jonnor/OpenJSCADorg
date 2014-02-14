@@ -82,6 +82,12 @@ for solid CAD anyway.
 
 */
 
+var toplevel = this;
+if (typeof exports !== 'undefined') {
+    // Running as common.js module
+    toplevel = exports;
+}
+
 (function(module){
 
 var _CSGDEBUG = false;
@@ -5966,4 +5972,4 @@ CSG.Polygon2D.prototype = CAG.prototype;
 
 module.CSG = CSG;
 module.CAG = CAG;
-})(this); //module to export to
+})(toplevel); //module to export to
