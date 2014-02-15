@@ -1,0 +1,42 @@
+{
+  "name": "OpenJSCADorg",
+  "description": "CAD solid modelling in JavaScript",
+  "keywords": [
+    "CAD", "CSG", "Solid modelling", "CNC"
+  ],
+  "author": "Rene K. Mueller <spiritdude@gmail.com>",
+  "contributors": [
+    "Joost Nieuwenhuijse"
+  ],
+  "version": "0.0.1",
+  "licenses": [
+    {
+      "type": "MIT"
+    },
+    {
+      "type": "GPLv2"
+    },
+    {
+      "type": "BSD"
+    }
+  ],
+  "engines": {
+    "node": ">=0.6.0"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+  },
+  "main": "./openjscad.js",
+  "bin": {
+    "openjscad": "./openjscad"
+  },
+  "homepage": "http://openjscad.org/",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jonnor/OpenJSCADorg.git"
+  },
+  "scripts": {
+    
+  }
+}
