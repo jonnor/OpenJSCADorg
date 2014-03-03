@@ -114,16 +114,19 @@ OpenJsCad.Viewer = function(containerelement, width, height, initialdepth) {
   );
 
   var _this=this;
-
-  var shiftControl = $('<div class="shift-scene"><div class="arrow arrow-left" />\
-    <div class="arrow arrow-right" />\
-    <div class="arrow arrow-top" />\
-    <div class="arrow arrow-bottom" /></div>');
+  var shiftControl = document.createElement('div');
+  shiftControl.className = 'shift-scene'
+  shiftControl.innerHTML = '<div class="arrow arrow-left" />\
+                              <div class="arrow arrow-right" />\
+                              <div class="arrow arrow-top" />\
+                              <div class="arrow arrow-bottom" />';
   this.touch.shiftControl = shiftControl;
 
-  $(containerelement).append(gl.canvas)
-    .append(shiftControl)
-    .hammer({//touch screen control
+  containerelement.appendChild(gl.canvas);
+  containerelement.appendChild(shiftControl);
+
+ if (typeof $ !== 'undefined') {
+  $(containerelement).hammer({//touch screen control
       drag_lock_to_axis: true
     }).on("transform", function(e){
       if (e.gesture.touches.length >= 2) {
@@ -176,6 +179,7 @@ OpenJsCad.Viewer = function(containerelement, width, height, initialdepth) {
       _this.touch.lastY = 0;
       _this.touch.scale = 0;
     });
+  }
 
   gl.onmousemove = function(e) {
     _this.onMouseMove(e);
