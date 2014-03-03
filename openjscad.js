@@ -7,9 +7,9 @@
 
 if (typeof require !== 'undefined') {
     // Running inside common.js environment
-    GL = require("lightgl");
-    CAG = require("csg").CAG;
-    CSG = require("csg").CSG;
+    GL = require("./lightgl");
+    CAG = require("./csg").CAG;
+    CSG = require("./csg").CSG;
 }
 
 OpenJsCad = function() { };
@@ -1623,6 +1623,6 @@ OpenJsCad.Processor.prototype = {
 
 
 if (typeof exports !== 'undefined') {
-    exports = OpenJsCad
+    module.exports = OpenJsCad
 }
 
