@@ -5,7 +5,7 @@
   "version": "0.0.1",
   "keywords": [],
   "dependencies": {
-        "components/underscore": "*"
+        "components/underscore": "1.8.3"
   },
   "development": {},
   "license": "MIT",
